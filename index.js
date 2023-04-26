@@ -68,6 +68,10 @@ document.addEventListener("click", function (e) {
   else if (e.target.parentElement.dataset.removeId) {
     removeOrderItem(e.target.parentElement.dataset.removeId)
   }
+  
+  else if (e.target.dataset.removeId) {
+    removeOrderItem(e.target.dataset.removeId)
+  }
   else if (e.target.parentElement.dataset.complete) {
     modal.classList.toggle("hidden");
   }
