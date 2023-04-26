@@ -1,17 +1,15 @@
-import { menuArray } from '/data.js'// javascript
-const menu=document.getElementById("menu")
-const complete=document.getElementById("comp-order")
-const modal=document.getElementById("modal")
+import { menuArray } from './data.js'// javascript
+const menu = document.getElementById("menu")
+const complete = document.getElementById("comp-order")
+const modal = document.getElementById("modal")
 let mybutton = document.getElementById("myBtn");
-const orderCont=document.getElementById("order-box")
+const orderCont = document.getElementById("order-box")
 const order = document.getElementById("order");
 let addedOrderItems = [];
-function addMenu()
-{
-    let menuHtml=``
-    menuArray.forEach(function(menu)
-    {
-        menuHtml+=`
+function addMenu() {
+  let menuHtml = ``
+  menuArray.forEach(function (menu) {
+    menuHtml += `
         <div class="menu-container"> 
         <img class="item-img" src="${menu.picture}"/> 
                     <div class="menu-item-description">
@@ -21,26 +19,28 @@ function addMenu()
                         <div class="menu-item-price"> $${menu.price} </div>  
                     </div> 
                     <div class="button-con">
-                    <button class="item-add" data-add-id="add-${menu.id}"><img class="add-img" src="images/add.png"/></button>
-                    <button class="item-remove" data-remove-id="remove-${menu.id}" disabled><img class="remove-img" src="images/remove.png"/></button>
+                    <button class="item-add" data-add-id="${menu.id}"><img class="add-img" src="images/add.png"/></button>
+                    <button class="item-remove" data-remove-id="${menu.id}"><img class="remove-img" src="images/remove.png"/></button>
                     </div>
                     
         </div>
         
             <div class="menu-item-container-divider"> </div>`
-        ;
+      ;
   });
   return menuHtml;
 }
 menu.innerHTML = addMenu();
-mybutton.addEventListener("click",topFunction)
+mybutton.addEventListener("click", topFunction)
 function topFunction() {
   if (document.body.scrollTop !== undefined) {
-    document.body.scrollTop = 0; }
+    document.body.scrollTop = 0;
+  }
   if (document.documentElement.scrollTop !== undefined) {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 }
+
 function getOrderHtml() {
   const orderList = document.getElementById("order-box");
   let orderHtml = ``;
@@ -60,31 +60,28 @@ function getOrderHtml() {
   hideOrder();
 }
 
-document.addEventListener("click",function(e)
-{
-    
-    if(e.target.dataset.addId)
-    {
-        handleAddItem(e.target.dataset.addId)
-    }
-    else if(e.target.dataset.removeId)
-    {
-        removeOrderItem(e.target.dataset.removeId)
-    }
-    else if(e.target.dataset.complete)
-    {
-        modal.classList.toggle("hidden");
-    }
-   
+document.addEventListener("click", function (e) {
+
+  if (e.target.parentElement.dataset.addId) {
+    handleAddItem(e.target.parentElement.dataset.addId)
+  }
+  else if (e.target.parentElement.dataset.removeId) {
+    removeOrderItem(e.target.parentElement.dataset.removeId)
+  }
+  else if (e.target.parentElement.dataset.complete) {
+    modal.classList.toggle("hidden");
+  }
+
 })
 
 function handleAddItem(menuId) {
   const targetMenuObj = menuArray.filter(function (menu) {
     return Number(menu.id) === Number(menuId);
   })[0];
-
+  // addedOrderItems.forEach(element => {
+  //   if(element.id === )
+  // });
   addedOrderItems.push(targetMenuObj);
-  
   getOrderHtml();
 }
 
