@@ -64,6 +64,7 @@ document.addEventListener("click", function (e) {
 
   if (e.target.parentElement.dataset.addId) {
     handleAddItem(e.target.parentElement.dataset.addId)
+    order.classList.remove("hidden")
   }
   else if (e.target.parentElement.dataset.removeId) {
     removeOrderItem(e.target.parentElement.dataset.removeId)
