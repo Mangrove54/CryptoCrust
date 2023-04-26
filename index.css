@@ -73,10 +73,13 @@ select {
     background-color: blue;
    
 }
-
+.complete-button-hold
+{
+    margin-top: 10px;
+}
 .menu-item-ingredients
 {
-    color: red;
+    color: green;
 }
 .menu-container{
         padding-left: 15px;
@@ -90,7 +93,7 @@ select {
     height:70px;
 }
 
-.item-add,.item-remove
+.item-add
 {
     
     height: 30px;
@@ -99,6 +102,15 @@ select {
     
     
     
+}
+.item-remove
+{
+    cursor: pointer;
+    font-weight: bold;
+}
+.item-remove:hover
+{
+    color: red;
 }
 .first-line
 {
