@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <!-- Importing external CSS files -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <!-- Importing fonts from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importing Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header section of the webpage -->
+    <header class="banner">
+      <div class="top-image">
+        <h1>CryptoCrust</h1>
+        <h4>The pizza you can HODL.</h4>
+      </div>
+    </header>
+    <!-- Main section of the webpage -->
+    <main>
+      <div class="menu" id="menu">
+        <!-- Menu content here -->
+      </div>
+      <div class="ordering hidden" id="order">
+        <!-- Order section -->
+        <h5 id="order-heading">Your Order:</h5>
+        <div id="order-box"></div>
+        <div id="total">
+          <h5>Total Price:</h5>
+          <h5 id="final-price"></h5>
+        </div>
+        <button class="main-btn" id="comp-order" type="button" data-complete="complete">
+          Complete Order
+        </button>
+      </div>
+      <div class="thank-you hidden" id="thank-you">
+        <!-- Thank you message -->
+      </div>
+      <div class="modal hidden">
+        <!-- Modal container -->
+        <div class="modal-container">
+          <div class="first-line">
+            <div class="heading">
+              <p class="enter-card-details">Enter card details</p>
+            </div>
+            <div class="close-modal-btn-container">
+              <button class="modal-close-btn" id="modal-close-btn">X</button>
+            </div>
+          </div>
+          <form class="card-form" id="payment-form">
+
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required/>
+                        <input class="middle-input" id="cardNumber" type="text" name="cardNumber" placeholder="Enter card number" required maxlength="16"/>
+                        <input type="text" id="cvvNumber" name="cvvNumber" placeholder="Enter CVV" required maxlength="3"/>
+                        <div class="month-year">
+                            <select name="Month" id="month-id">
+                                <option value="january">January</option>
+                                    <option value="february">February</option>
+                                    <option value="march">March</option>
+                                    <option value="april">April</option>
+                                    <option value="may">May</option>
+                                    <option value="june">June</option>
+                                    <option value="july">July</option>
+                                    <option value="august">August</option>
+                                    <option value="september">September</option>
+                                    <option value="october">October</option>
+                                    <option value="november">November</option>
+                                    <option value="december">December</option>
+                            </select>
+                            <select name="Year" id="year-id">
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                            </select>
+                        </div>
+                        <button class="main-btn" id="pay-btn" type="submit" data-pay-btn="paybtn"> Pay </button> 
+                    </form>            
+                </div>
+            </div>
+            
+            
+        </main>
+        <div class="goup-bg">
+			<button id="myBtn" title="Go to top"><img src="images/go-up.png" class="goup-img" alt="up icon"/></button>
+        <footer class="footnotes">
+            <div class="foot">
+                <h6>STOP: 0x0000007B (0xF641F84C, 0xC0000034, 0x00000000, 0x00000000)                   REACHED_END_OF_WEBSITE
+                    If this is the first time you've seen this footer,
+                    go to the top again. That's where the real stuff is :)
+                    <br><br>
+                    Copyright © 2023 CryptoCrust. All rights reserved. We take our content seriously, so please don't copy it without our permission. Unless, of course, you want to be haunted by the ghost of our lawyers. Just kidding... or are we? 👻</h6>
+            </div>
+        </footer>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>

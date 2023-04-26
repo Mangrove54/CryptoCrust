@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DotGothic16', sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+}
+.main-btn {
+    font-family: 'DotGothic16', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+select {
+    
+} 
+#modal
+{
+    
+}
+.modal-container {
+  position: fixed;
+  width: 60%;
+  height: 40%;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 5px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+#myBtn {
+  display: flex; 
+  height: 90px;
+  padding: 0;
+  margin: auto;;
+  width: 90px;
+  position: fixed;
+  right: 5px;
+  bottom: 20px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+
+}
+.month-year
+{
+    display: flex;
+}
+
+.goup-img
+{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: auto;
+}
+.close-modal-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-btn:hover {
+    color: white;
+    border-color: white;
+    background-color: blue;
+   
+}
+
+.menu-item-ingredients
+{
+    color: red;
+}
+.menu-container{
+        padding-left: 15px;
+}
+.ordering
+{
+    padding-left: 15px;
+}
+.item-img
+{
+    height:70px;
+}
+
+.item-add,.item-remove
+{
+    
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    
+    
+}
+.first-line
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.enter-card-details
+{
+    text-align: left;
+}
+.item-add:hover{
+    border-color: green;
+}
+.item-remove:hover:enabled{
+    border-color: red;
+}
+
+.add-img,.remove-img
+{
+    
+    height: 30px;
+}
+.add-img:hover
+{
+    background-image: url("images/add-change.png")
+}
+
+.hidden
+{
+    display: none;
+}
+header{
+    background-image: url("images/stonks.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding:10px 0;
+    color: white;
+    
+    
+}
+h1,h4{
+    padding-left: 15px;
+}
+footer{
+    background: blue;
+    color: white;
+    display: flex;
+    align-content: center;
+    
+}
+h6{
+    padding: 10px;
+}
+
